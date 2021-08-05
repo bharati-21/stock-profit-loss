@@ -5,53 +5,113 @@
 }
 
 body {
+    background: url('./assets/whi.svg') no-repeat center center/ cover;
 }
 
 #page-wrapper {
     min-height: 90vh;
     margin: 2rem;
-    
 }
 
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+header  {
+    min-height: 5vh;
+    width: 100%;
+    background: black;
+    padding: 1rem 1.25rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h3 a{
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+}
+
+header nav h3 a:hover {
+    background: white;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+/* MAIN SECTION */
 .main {
     max-width: 100%;
-    height: 80vh;
+    height: 75vh;
+    background: url('./assets/yellow.svg') no-repeat center center/ cover;
+    padding: 1rem 2rem;
 }
 
-.main > .container {
+.container {
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    max-width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-section.input {
-    background: url('https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1948&q=80') no-repeat center center/ cover;
-    position: relative;
-    color: #fff;
-    flex: 1;
-    height: 100%;
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+label, input[type="number"] {
+    display: block;
+}
+
+label {
+    font-size: 1.2rem;
 }
 
 
-section.input::after {
-    background: rgba(0,0,0,0.7);
-    content: '';
+input[type="number"] {
+    max-width: 200px;
+    margin: 0.5rem auto 1rem auto;
+}
+
+/* FOOTER */
+footer {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index : 1;
+    background: black;
 }
 
-section.input > *{
-    position: relative;
-    z-index: 100;
+footer ul.social-links {
+    width: 100%;
+    min-height: 5vh;
+    text-align: center;
 }
 
-section.output {
-    flex: 1;
+.social-links li {
+    margin: 1rem 2rem;
+    display: inline-block;
+}
 
+.social-links li a {
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+}
+
+.social-links li a:hover {
+    background: white;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+i.fab {
+    margin-right: 0.25rem;
 }

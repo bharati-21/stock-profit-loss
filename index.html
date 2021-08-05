@@ -8,21 +8,68 @@
         <title>Stock: Profit or Loss</title>
 
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     </head>
     <body>
         <div id="page-wrapper">
-            <nav></nav>
             <header>
-                <h1 class="hero">Stock</h1>
-            </header>
-            <main class="main">
-                <div class="container">
-                    <section class="input">
-                        <h3>Enter price</h3>
-                    </section>
-                    <section class="output"></section>
-                </div>
+                        <nav>
+                            <h3>
+                                <a href="https://bharati-portfolio.netlify.app/" target="_blank" class="nav-link">Bharati Subramanian</a>
+                            </h3>
+                            <h3>
+                                <a href="https://github.com/bharati-21/stock-profit-loss" target="_blank" class="nav-link">GtiHub Repo</a>
+                            </h3>
+                        </nav>
+                    </header>
+            <main class="main container">
+                <!-- SECTION INPUT -->
+                <section class="section input">
+                    <div class="section-content input-content">
+                        <h1 class="hero">Check Profit/ Loss of Your Stock</h1>
+                        <label for="purchase-price">Purchase Price</label>
+                        <input type="number" name="purchase-price" id="purchase-price" class="purchase-price">
+
+                        <label for="stock-quantity">Stock Quantity</label>
+                        <input type="number" name="stock-quantity" id="stock-quantity" class="stock-quantity">
+
+                        <label for="current-price">Current Stock Price</label>
+                        <input type="number" name="current-price" id="current-price" readonly class="current-price">
+
+                        <button class="btn-check">Check</button>
+                    </div>
+                </section>
+
+                <!-- SECTION OUTPUT -->
+                <section class="output">
+                    <div class="section-content output-content">
+                        <h3>Output price</h3>
+                    </div>
+                </section>
             </main>
+            <footer>
+                <ul class="social-links">
+                    <li>
+                        <a href="">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </footer>
         </div>
     </body>
 </html>
