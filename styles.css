@@ -71,7 +71,7 @@ header nav h3 a:hover {
 
 .container h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
 }
 
 label, input[type="number"] {
