@@ -4,8 +4,8 @@ const stockQuantityIp = document.querySelector('.stock-quantity');
 const currentPriceIp = document.querySelector('.current-price');
 const main = document.querySelector('.main');
 
-let stockPrice = 110;
-currentPriceIp.value = stockPrice;
+// let stockPrice = 110;
+// currentPriceIp.value = stockPrice;
 
 
 const btnCheck = document.querySelector('.btn-check');
@@ -17,10 +17,12 @@ btnCheck.addEventListener('click', checkProfitLoss);
 function checkProfitLoss(e) {
     let stockQuantity = stockQuantityIp.value;
     let purchasePrice = purchasePriceIp.value;
+    let stockPrice = currentPriceIp.value;
 
-    if(properValues(stockQuantity, purchasePrice)) {
+    if(properValues(stockQuantity, purchasePrice, stockPrice)) {
         stockQuantity = Number(stockQuantity);
         purchasePrice = Number(purchasePrice);
+        stockPrice = Number(stockPrice);
 
         const priceDifference = (Math.abs(purchasePrice - stockPrice)).toFixed(2);
         const profitLoss = (priceDifference*stockQuantity).toFixed(2);
@@ -56,14 +58,14 @@ function checkProfitLoss(e) {
     }
 }
 
-function properValues(stockQuantity, purchasePrice) {
-    if(purchasePrice === "" || stockQuantity === "" ) {
+function properValues(stockQuantity, purchasePrice, stockPrice) {
+    if(purchasePrice === "" || stockQuantity === "" || stockPrice === "") {
         message.className = "message error";
         message.innerText = 'Please enter all the values';
         return false;
     }
 
-    else if(Number.parseInt(stockQuantity) <=0 || Number.parseInt(purchasePrice) <= 0) {
+    else if(Number.parseInt(stockQuantity) <=0 || Number.parseInt(purchasePrice) <= 0 || Number.parseInt(stockPrice) <= 0) {
         message.className = "message error";
         message.innerText = 'Please enter values greater than 0';
         return false;
