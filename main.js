@@ -15,6 +15,7 @@ const message = document.querySelector('.message');
 btnCheck.addEventListener('click', checkProfitLoss);
 
 function checkProfitLoss(e) {
+
     let stockQuantity = stockQuantityIp.value;
     let purchasePrice = purchasePriceIp.value;
     let stockPrice = currentPriceIp.value;
@@ -81,3 +82,8 @@ function changeTheme(theme) {
 
     main.classList.add(theme);
 }
+
+
+// function getValue() {
+//     fetch('https://mock-stock-api.herokuapp.com/getValue').then(res => res.json()).then(res => console.log(res));
+// }
