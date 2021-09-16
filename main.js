@@ -27,7 +27,7 @@ function checkProfitLoss(e) {
 
         const priceDifference = (Math.abs(purchasePrice - stockPrice)).toFixed(2);
         const profitLoss = (priceDifference*stockQuantity).toFixed(2);
-        const profitLossPercentage = ((priceDifference*100) / purchasePrice).toFixed(2);
+        const profitLossPercentage = ((priceDifference / purchasePrice) *100).toFixed(2);
 
         if(purchasePrice > stockPrice) {
             message.className = "message loss";
@@ -72,6 +72,11 @@ function properValues(stockQuantity, purchasePrice, stockPrice) {
         return false;
     }
 
+    else if(!Number.isInteger(Number(stockQuantity))) {
+        message.className = "message error";
+        message.innerText = 'Please enter a valid value for quantity';
+        return false;
+    }
     return true;
 }
 

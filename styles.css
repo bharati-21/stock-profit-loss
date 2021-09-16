@@ -190,3 +190,19 @@ i.fab {
     margin-right: 0.25rem;
 }
 
+@media screen and (max-width: 500px) {
+    #page-wrapper {
+        margin: 0;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    header {
+        padding: 1rem;
+    }
+}
+
