@@ -2,7 +2,7 @@
 An application created using JavaScript that checks if the stock bought by the user gives them profit or loss!
 
 ### This application checkes the user's stock purchase price against the current stock price to display if the user gained or lost.
-Live demo of the application: https://bharati-stock-profit-loss.netlify.app/
+[Live demo of the application](https://bharati-stock-profit-loss.netlify.app/)
 <hr />
 
 ## PREREQUISITES
